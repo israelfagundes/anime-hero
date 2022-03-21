@@ -84,12 +84,16 @@ export function ThemeProvider({ children }: PropsWithRequiredChildren) {
   }, []);
 
   useEffect(() => {
-    document.body.dataset.theme = currentTheme;
+    const isBrowser = typeof window !== 'undefined';
 
-    localStorage.setItem(
-      composeStorageKey('theme'),
-      JSON.stringify(currentTheme),
-    );
+    if (isBrowser) {
+      document.body.dataset.theme = currentTheme;
+
+      window.localStorage.setItem(
+        composeStorageKey('theme'),
+        JSON.stringify(currentTheme),
+      );
+    }
   }, [currentTheme]);
 
   return (
