@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Layout, Menu as AntdMenu } from 'antd';
 import { useRouter } from 'next/router';
 
@@ -7,7 +6,6 @@ import ThemeToggler from '../../../ThemeToggler';
 import { MENU_ENTRIES } from '../../../../constants';
 
 import { useTheme } from '../../../../hooks/useTheme';
-import { ThemeModes } from '../../../../contexts/theme';
 
 function Menu() {
   const router = useRouter();

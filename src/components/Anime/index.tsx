@@ -1,4 +1,4 @@
-import { Rate, Badge } from 'antd';
+import { Rate } from 'antd';
 import { useMemo } from 'react';
 
 import { AnimeResponseData } from '../../common/types/api/anime';

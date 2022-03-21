@@ -49,11 +49,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
         const randomVideo =
           data.data[getRandomNumberFromInterval(0, data.data.length)]
-            .attributes;
+            ?.attributes;
 
         bannerVideo = {
-          frameTitle: randomVideo.canonicalTitle,
-          videoId: randomVideo.youtubeVideoId,
+          frameTitle: randomVideo?.canonicalTitle,
+          videoId: randomVideo?.youtubeVideoId,
         } as VideoBannerProps;
 
         trending = data;

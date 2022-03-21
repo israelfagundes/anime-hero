@@ -1,12 +1,12 @@
 import { GetServerSideProps } from 'next';
 
-import { Anime as AnimeProps } from '../../common/types/api/anime';
+import { AnimeResponseData } from '../../common/types/api/anime';
 import Anime from '../../components/Anime';
 
 import { anime } from '../../services/anime';
 
 type AnimePageProps = {
-  animeData: AnimeProps;
+  animeData: AnimeResponseData;
 };
 
 function AnimePage({ animeData }: AnimePageProps) {
@@ -32,7 +32,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
   return {
     props: {
-      animeData: {} as AnimeProps,
+      animeData: {} as AnimeResponseData,
     },
   };
 };
