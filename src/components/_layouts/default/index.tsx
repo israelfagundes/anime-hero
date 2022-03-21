@@ -1,6 +1,7 @@
 import { Layout } from 'antd';
+import dynamic from 'next/dynamic';
 
-import Menu from './Menu';
+const Menu = dynamic(() => import('./Menu'), { ssr: false });
 
 type DefaultLayoutProps = {
   children: JSX.Element;
