@@ -1,5 +1,6 @@
 import '../styles/globals.less';
 import type { AppProps } from 'next/app';
+import NextNProgress from 'nextjs-progressbar';
 
 import { Default } from '../components/_layouts';
 
@@ -9,7 +10,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AppProviders>
       <Default>
-        <Component {...pageProps} />
+        <>
+          <NextNProgress color="#FF0167" />
+          <Component {...pageProps} />
+        </>
       </Default>
     </AppProviders>
   );
