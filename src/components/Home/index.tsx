@@ -51,7 +51,7 @@ function Home({ topRated, seasonHighlights, bannerVideo }: HomeProps) {
       </div>
 
       <div className="home__highlights">
-        <h3>Season Highlights</h3>
+        <h3>Trending</h3>
 
         <ul className="home__anime-list">
           {seasonHighlights.data?.map(({ attributes, id }) => {
