@@ -64,6 +64,7 @@ function Home({ topRated, seasonHighlights, bannerVideo }: HomeProps) {
 
             return (
               <AnimeCard
+                key={id}
                 anime={{
                   ageRatingGuide,
                   rating: String((Number(averageRating) / 10).toFixed(2)),
