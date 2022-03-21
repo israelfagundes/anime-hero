@@ -1,0 +1,30 @@
+.home__dashboard {
+  padding: 16px;
+}
+
+body[data-theme=dark] {
+  .home__highlights {
+    h3 {
+      color: @text-color-dark;
+    }
+  }
+}
+
+.home__highlights {
+  margin-top: 32px;
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: @text-color;
+  }
+}
+
+.home__anime-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}

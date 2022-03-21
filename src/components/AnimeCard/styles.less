@@ -1,0 +1,138 @@
+@accent-red: #D80000;
+@bold-red: #B40607;
+
+@card-width: 160px;
+@card-height: 226px;
+@small-card-width: 160px;
+@small-card-height: 186px;
+
+.anime-card__root {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  max-width: fit-content;
+
+  position: relative;
+
+  filter: brightness(0.75);
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(1);
+  }
+}
+
+.anime-card__root-info-aside {
+  & > a {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .anime-card__thumb-wrapper {
+    max-height: @small-card-height;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .anime-card__info-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    min-height: @small-card-height;
+
+    color: @text-color;
+  }
+}
+
+.anime-card__thumb-wrapper {
+  max-width: @card-width;
+  max-height: @card-height;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  img {
+    height: @card-height;
+  }
+}
+
+.anime-card__anime-rating {
+  position: absolute;
+  background: @bold-red;
+  width: 64px;
+  height:28px;
+
+  color: #fff;
+  font-size: 0.85rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 16px;
+
+  top: 10px;
+  left: 10px;
+}
+
+.anime-card__info-wrapper {
+  h2 {
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 8px;
+    color: @text-color;
+
+    max-width: @card-width;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.anime-card__info-aside__title-wrapper {
+  h2 {
+    text-align: left;
+    font-size: 1.1rem;
+  }
+
+  span {
+    font-size: 0.9rem;
+  }
+}
+
+.anime-card__anime-rating-outlined {
+  color: @accent-red;
+  border: 1px solid @accent-red;
+  background: transparent;
+
+  width: 64px;
+  height:28px;
+
+  font-size: 0.85rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 16px;
+}
+
+
+body[data-theme=dark] {
+  .anime-card__info-wrapper, .anime-card__info-aside__title-wrapper {
+    color: @text-color-dark;
+
+    h2 {
+      color: @text-color-dark;
+    }
+  }
+
+}
