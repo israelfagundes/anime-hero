@@ -46,7 +46,7 @@ function AnimeCard({ anime }: AnimeCardProps) {
                 </div>
 
                 <div className="anime-card__anime-rating-outlined">
-                  {rating} <HiStar color="#D80000" />
+                  {rating} <HiStar color="var(--ant-primary-color)" />
                 </div>
               </>
             )}
